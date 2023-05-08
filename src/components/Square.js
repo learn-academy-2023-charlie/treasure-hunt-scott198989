@@ -1,9 +1,15 @@
 import React from "react"
 
-const Square = () => {
+const Square = (props) => {
   return (
     <>
-      <div className="square"></div>
+     {props.board.map((value, index) => {
+            return(
+              <div className="square" key={index}>
+                {value}
+              </div>
+            )
+          })}
     </>
   )
 }
